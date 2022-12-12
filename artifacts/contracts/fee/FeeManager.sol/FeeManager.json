@@ -1,0 +1,509 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "FeeManager",
+  "sourceName": "contracts/fee/FeeManager.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_feeTreasuryAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_feeContractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721CreateAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155CreateAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721MintAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155MintAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721CreateAmountETH",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155CreateAmountETH",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721MintAmountETH",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155MintAmountETH",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_feeContractAddress",
+          "type": "address"
+        }
+      ],
+      "name": "changeFeeContractAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155CreateAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC1155Create",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155CreateAmountETH",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC1155CreateInETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155MintAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC1155Mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC1155MintAmountETH",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC1155MintInETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721CreateAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC721Create",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721CreateAmountETH",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC721CreateInETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721MintAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC721Mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_feeERC721MintAmountETH",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeFeeERC721MintInETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_feeTreasuryAddress",
+          "type": "address"
+        }
+      ],
+      "name": "changeFeeTreasuryAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeContractAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC1155CreateAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC1155CreateAmountETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC1155MintAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC1155MintAmountETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC721CreateAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC721CreateAmountETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC721MintAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeERC721MintAmountETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "feeTreasuryAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeContractAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC1155Create",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC1155CreateInETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC1155Mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC1155MintInETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC721Create",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC721CreateInETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC721Mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeERC721MintInETH",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFeeTreasuryAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108a33803806108a383398101604081905261002f91610108565b61003f61003a610098565b61009c565b600180546001600160a01b039b8c166001600160a01b031991821617909155600280549a909b16991698909817909855600395909555600493909355600591909155600655600755600855600991909155600a55610189565b3390565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80516001600160a01b038116811461010357600080fd5b919050565b6000806000806000806000806000806101408b8d031215610127578586fd5b6101308b6100ec565b995061013e60208c016100ec565b985060408b0151975060608b0151965060808b0151955060a08b0151945060c08b0151935060e08b015192506101008b015191506101208b015190509295989b9194979a5092959850565b61070b806101986000396000f3fe608060405234801561001057600080fd5b50600436106101fb5760003560e01c8063715018a61161011a578063cbef2882116100ad578063e7986b7a1161007c578063e7986b7a1461035d578063ec55cff614610370578063f2fde38b14610378578063ff58a8801461038b578063ff6ee94e1461039e576101fb565b8063cbef28821461033d578063cd3b4d9614610345578063dba2df9d1461034d578063e61c4f0814610355576101fb565b80638da5cb5b116100e95780638da5cb5b1461031d5780639069fcef14610325578063c3f008641461032d578063c79577d414610335576101fb565b8063715018a6146102f25780637612ccb5146102fa5780637bb8b4c41461030257806385a6ebb91461030a576101fb565b80634f21773111610192578063593acdad11610161578063593acdad146102bc5780635d911994146102cf5780635e2710f5146102d75780636367540d146102ea576101fb565b80634f21773114610291578063503379d51461029957806354f20227146102a157806355f0a945146102b4576101fb565b80631e158e5e116101ce5780631e158e5e14610243578063214a5076146102565780633ebab3c814610269578063497ea6581461027c576101fb565b80630be2e01f14610200578063175f50ab1461021e578063177bcc05146102265780631d5bb71a1461023b575b600080fd5b6102086103a6565b60405161021591906106cc565b60405180910390f35b6102086103ac565b610239610234366004610625565b6103b2565b005b6102086103bf565b6102396102513660046105f7565b6103c5565b610239610264366004610625565b6103ef565b610239610277366004610625565b6103fc565b610284610409565b604051610215919061063d565b610208610418565b61020861041e565b6102396102af366004610625565b610424565b610208610431565b6102396102ca366004610625565b610437565b610208610444565b6102396102e53660046105f7565b61044a565b610208610474565b61023961047a565b61020861048e565b610208610494565b610239610318366004610625565b61049a565b6102846104a7565b6102086104b6565b6102086104bc565b6102086104c2565b6102086104c8565b6102086104ce565b6102846104d4565b6102086104e3565b61023961036b366004610625565b6104e9565b6102846104f6565b6102396103863660046105f7565b610505565b610239610399366004610625565b610548565b610284610555565b60045490565b60075481565b6103ba610564565b600555565b60095481565b6103cd610564565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6103f7610564565b600455565b610404610564565b600855565b6001546001600160a01b031681565b60085481565b60055481565b61042c610564565b600355565b60085490565b61043f610564565b600755565b60065490565b610452610564565b600280546001600160a01b0319166001600160a01b0392909216919091179055565b600a5490565b610482610564565b61048c60006105a3565b565b60075490565b600a5481565b6104a2610564565b600655565b6000546001600160a01b031690565b60035490565b60065481565b60055490565b60035481565b60045481565b6002546001600160a01b031681565b60095490565b6104f1610564565b600955565b6002546001600160a01b031690565b61050d610564565b6001600160a01b03811661053c5760405162461bcd60e51b815260040161053390610651565b60405180910390fd5b610545816105a3565b50565b610550610564565b600a55565b6001546001600160a01b031690565b61056c6105f3565b6001600160a01b031661057d6104a7565b6001600160a01b03161461048c5760405162461bcd60e51b815260040161053390610697565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b3390565b600060208284031215610608578081fd5b81356001600160a01b038116811461061e578182fd5b9392505050565b600060208284031215610636578081fd5b5035919050565b6001600160a01b0391909116815260200190565b60208082526026908201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160408201526564647265737360d01b606082015260800190565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b9081526020019056fea2646970667358221220872606895f15cb596e60b9bcec8d6d1e77cb4c0a22e92afcdd3a60ef3fb123c064736f6c63430008010033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101fb5760003560e01c8063715018a61161011a578063cbef2882116100ad578063e7986b7a1161007c578063e7986b7a1461035d578063ec55cff614610370578063f2fde38b14610378578063ff58a8801461038b578063ff6ee94e1461039e576101fb565b8063cbef28821461033d578063cd3b4d9614610345578063dba2df9d1461034d578063e61c4f0814610355576101fb565b80638da5cb5b116100e95780638da5cb5b1461031d5780639069fcef14610325578063c3f008641461032d578063c79577d414610335576101fb565b8063715018a6146102f25780637612ccb5146102fa5780637bb8b4c41461030257806385a6ebb91461030a576101fb565b80634f21773111610192578063593acdad11610161578063593acdad146102bc5780635d911994146102cf5780635e2710f5146102d75780636367540d146102ea576101fb565b80634f21773114610291578063503379d51461029957806354f20227146102a157806355f0a945146102b4576101fb565b80631e158e5e116101ce5780631e158e5e14610243578063214a5076146102565780633ebab3c814610269578063497ea6581461027c576101fb565b80630be2e01f14610200578063175f50ab1461021e578063177bcc05146102265780631d5bb71a1461023b575b600080fd5b6102086103a6565b60405161021591906106cc565b60405180910390f35b6102086103ac565b610239610234366004610625565b6103b2565b005b6102086103bf565b6102396102513660046105f7565b6103c5565b610239610264366004610625565b6103ef565b610239610277366004610625565b6103fc565b610284610409565b604051610215919061063d565b610208610418565b61020861041e565b6102396102af366004610625565b610424565b610208610431565b6102396102ca366004610625565b610437565b610208610444565b6102396102e53660046105f7565b61044a565b610208610474565b61023961047a565b61020861048e565b610208610494565b610239610318366004610625565b61049a565b6102846104a7565b6102086104b6565b6102086104bc565b6102086104c2565b6102086104c8565b6102086104ce565b6102846104d4565b6102086104e3565b61023961036b366004610625565b6104e9565b6102846104f6565b6102396103863660046105f7565b610505565b610239610399366004610625565b610548565b610284610555565b60045490565b60075481565b6103ba610564565b600555565b60095481565b6103cd610564565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6103f7610564565b600455565b610404610564565b600855565b6001546001600160a01b031681565b60085481565b60055481565b61042c610564565b600355565b60085490565b61043f610564565b600755565b60065490565b610452610564565b600280546001600160a01b0319166001600160a01b0392909216919091179055565b600a5490565b610482610564565b61048c60006105a3565b565b60075490565b600a5481565b6104a2610564565b600655565b6000546001600160a01b031690565b60035490565b60065481565b60055490565b60035481565b60045481565b6002546001600160a01b031681565b60095490565b6104f1610564565b600955565b6002546001600160a01b031690565b61050d610564565b6001600160a01b03811661053c5760405162461bcd60e51b815260040161053390610651565b60405180910390fd5b610545816105a3565b50565b610550610564565b600a55565b6001546001600160a01b031690565b61056c6105f3565b6001600160a01b031661057d6104a7565b6001600160a01b03161461048c5760405162461bcd60e51b815260040161053390610697565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b3390565b600060208284031215610608578081fd5b81356001600160a01b038116811461061e578182fd5b9392505050565b600060208284031215610636578081fd5b5035919050565b6001600160a01b0391909116815260200190565b60208082526026908201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160408201526564647265737360d01b606082015260800190565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b9081526020019056fea2646970667358221220872606895f15cb596e60b9bcec8d6d1e77cb4c0a22e92afcdd3a60ef3fb123c064736f6c63430008010033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
